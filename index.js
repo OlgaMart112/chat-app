@@ -2,8 +2,10 @@ const status = document.querySelector('.user-status');
 const messages = document.querySelector('.message-field');
 const form = document.querySelector('.form');
 const input = document.querySelector('.userInput');
+var el = document.getElementById('server-time');
 
-const ws = new WebSocket('ws://localhost:3000');
+var HOST = location.origin.replace('ws://localhost:3000')
+var ws = new WebSocket(HOST);
 
 function setStatus(value) {
     status.innerHTML = value;
@@ -12,6 +14,7 @@ function setStatus(value) {
 function printMessage(message) {
     const li = document.createElement('li');
     li.innerHTML = message;
+    console.log(message)
     messages.appendChild(li);
 } 
 
@@ -19,7 +22,7 @@ function sendData(event) {
     event.preventDefault();
     console.log(input.value)
     ws.send(input.value);
-    input.value = "";
+   
 }
 
 form.addEventListener('submit', sendData)
