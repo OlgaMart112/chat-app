@@ -1,0 +1,39 @@
+.chat-title {
+    text-align: center;
+    color: rgb(107, 31, 97);
+    font-family: Roboto, sans-serif;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    height: 620px;
+    background-color: rgb(243, 207, 248);
+    margin: 0 auto;
+}
+
+.message-field {
+    width: 680px;
+    height: 500px;
+    background-color: rgb(243, 237, 230);
+}
+
+.form {
+    display: flex;
+    width: 680px;
+    justify-content: space-between;
+}
+.userInput {
+    width: 500px;
+}
+
+.send-button {
+    width: 180px;
+    background-color: rgb(107, 31, 97);
+    color: rgb(243, 237, 230);
+    border: none;
+    text-transform: uppercase;
+}

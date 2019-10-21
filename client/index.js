@@ -11,9 +11,9 @@ function setStatus(value) {
 }
 
 function printMessage(message) {
-    const li = document.createElement('li');
-    li.innerHTML = message;
-    messages.appendChild(li);
+    const item = document.createElement('p');
+    item.innerHTML = message;
+    messages.appendChild(item);
 } 
 
 function sendData(event) {
@@ -29,5 +29,3 @@ ws.onclose = () => setStatus('Disсonnected');
 ws.onmessage = response => {
     printMessage(response.data);
 }
-
-

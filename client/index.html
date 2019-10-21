@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
     <body>   
+        <h1 class="chat-title">Chat room</h1>
         <div class="chat-wrapper">
             <div>
                 <p class="user-status"></p>
@@ -14,8 +16,8 @@
             <div class="message-field"></div>
             <div>
                 <form class="form">
-                    <input class="userInput" type="text" placeholder="Type your message here..."/>
-                    <button type="submit">Send</button>
+                    <textarea class="userInput" type="text" placeholder="Type your message here..."></textarea>
+                    <button type="submit" class="send-button">Send</button>
                 </form>
             </div>
         </div>
