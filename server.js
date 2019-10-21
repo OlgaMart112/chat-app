@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, './client/index.html');
 
 const server = express()
-  .use(express.static('client'))
-  .use((req, res) => res.sendFile(INDEX) )
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+    .use(express.static('client'))
+    .use((req, res) => res.sendFile(INDEX) )
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 const wss = new SocketServer({ server });
 
@@ -18,8 +18,6 @@ wss.on('connection', (ws) => {
     });;
 });
 
-function sendData (data) {
-    wss.clients.forEach(ws => {
-        ws.send(data);
-    });
+function sendData(data) {
+    wss.clients.forEach(ws => ws.send(data));
 }
