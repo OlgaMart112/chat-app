@@ -4,8 +4,8 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.userInput');
 var el = document.getElementById('server-time');
 
-var HOST = location.origin.replace('ws://localhost:3000')
-var ws = new WebSocket(HOST);
+
+var ws = new WebSocket('ws://localhost:3000');
 
 function setStatus(value) {
     status.innerHTML = value;
@@ -22,7 +22,6 @@ function sendData(event) {
     event.preventDefault();
     console.log(input.value)
     ws.send(input.value);
-   
 }
 
 form.addEventListener('submit', sendData)
