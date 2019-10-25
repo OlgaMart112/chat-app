@@ -19,6 +19,7 @@
     width: 680px;
     height: 500px;
     background-color: rgb(243, 237, 230);
+    overflow: scroll;
 }
 
 .form {
